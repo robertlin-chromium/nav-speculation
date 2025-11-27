@@ -1,7 +1,8 @@
 # Speculation Rules form_submission field Explainer
 
-Currently, it is not allowed to active prerender from a form submission by design. This is an explainer for a proposed addition to the Speculation Rules API, which allows web developers to specify "form_submission" to their speculation rules to allow prerender activation from a form submission.
-Examples include a simple search form which results in a “/search?q=XXX” GET request navigation, support of which has been requested by web developers.
+Currently, form submissions cannot activate prerendered pages by design. This is an explainer for a proposed addition to the [Speculation Rules API](https://developer.mozilla.org/en-US/docs/Web/API/Speculation_Rules_API), which allows web developers to specify "form_submission" in their speculation rules to specify that a prerendered page can only be activated by a form submission.
+Examples include a simple search form which results in a “/search?q=XXX” GET request navigation, [support of which has been requested by web developers.](https://issues.chromium.org/issues/346555939)
+
 
 ## The proposal
 Introduce a field “form_submission” to speculation rules, allowing web developers to specify which speculative navigation is a form submission one. This will only be available for GET form-based speculations.
